@@ -1,0 +1,26 @@
+spread:-
+function sum(a, b) {
+//   return a + b;
+// }
+
+// const array = [1, 2, 3, 4];
+
+// const result = sum(...array); //spread will spread the array while calling;
+
+Rest:-
+// function sum(a, b, ...rest) {
+//   // a -> 1
+//   // b -> 2
+//   // rest -> [ 3, 4 ]
+
+//   const nums = [a, b, ...rest];
+//   // [1, 2, 3, 4]
+//   let sum = 0;
+//   for (const num of nums) {
+//     sum += num;
+//   }
+//   return sum;
+// }
+
+// const result3 = sum(1, 2, 3, 4);
+// console.log(result3);
