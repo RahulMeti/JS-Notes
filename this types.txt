@@ -1,3 +1,17 @@
+8888888888888888888888888888888888888888888888888888888888888888
+VVI :-
+IMPLICIT BINDING MEANS OBJECT LEFT TO THE FUNCTION WHEN CALLED;
+while calling -- a.par();
+
+Explicit:
+while calling -- details.call(par);
+
+LEXICAL BINDING:-
+ARROW FUNCTION;
+
+
+8888888888888888888888888888888888888888888888888888888888888888
+
 TYPE-1 :-
 
 var a={
@@ -92,6 +106,53 @@ details.apply( pers3,arr);//.apply speads array in older and current js version.
 var mgr=details.bind(pers1);//.bind will create new function and will not call the object 
 //until new function is called using this.
 mgr();// now the object is called
+
+
+pers1={
+    name:"rahu",
+    age:22,
+       play(){
+        console.log(this);
+    }
+}
+pers2={
+    name:"Anup",
+    age:23,
+}
+
+pers1.play.call(pers2);
+
+--------------------------------------------------------------------------
+
+
+Lexical Binding:--
+      pers1={
+    name:"rahu",
+    age:22,
+       play:function(){
+        innerfun=()=>{
+            console.log(this);  //in this the arrowfunctions this will become this of NORMAL FUNCTION.
+       }
+       innerfun();
+    }
+}
+pers1.play(); this calls the object pers1;
+
+ pers1={
+    name:"rahu",
+    age:22,
+       play:function(){
+        innerfun=()=>{
+            innerfun1=()=>{
+            console.log(this); //in this the arrowfunctions go on until it finds normal(non arrow) function;
+       }
+       innerfun1();
+       }
+       innerfun();
+    }
+}
+pers1.play();
+
 ---------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------
