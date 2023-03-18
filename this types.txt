@@ -1,0 +1,9 @@
+var a={
+    name:"rahu",
+    age:22,
+    call:function(){
+     console.log(this.age);
+    }
+}
+a.call()
+// this will make object left to function
