@@ -40,5 +40,58 @@ a.pers1.aall(); //calls object to the left of function aall that is pers1
 a.pers2.ball(); //calls object to the left of function ball that is pers2
 a.pers3.call();//calls object to the left of function call that is pers3
 ---------------------------------------------------------------------------------------------------------------------
-TYPE-2:-
+TYPE-2:-Explicit Binding
+function details(){
+console.log("name :"+this.name);
+console.log("age :"+this.age);
+} 
+    pers1={
+    name:"rahu",
+    age:22,
+}
+pers2={
+    name:"Anup",
+    age:23,
+   
+},
+pers3={
+    name:"Rakesh",
+    age:24,  
+}
+details.call( pers1); //.call is used to call object using this.
+details.call( pers2);
+details.call( pers3);
 
+
+
+
+function details(greet,country){  //all variables except this should be mentioned here
+console.log("name :"+this.name);
+console.log("age :"+this.age);
+console.log("greet :"+greet);
+console.log("Nationality :"+country);
+} 
+    pers1={
+    name:"rahu",
+    age:22,
+}
+pers2={
+    name:"Anup",
+    age:23,
+   
+},
+pers3={
+    name:"Rakesh",
+    age:24,  
+}
+var arr=["hi","Indian"]
+details.call( pers1,"hello","Indian");//fiest should be for this operator and the next all in sequence;
+details.call( pers2,...arr);//use call or spread to pass operator for js6 and above.
+details.apply( pers3,arr);//.apply speads array in older and current js version.
+
+var mgr=details.bind(pers1);//.bind will create new function and will not call the object 
+//until new function is called using this.
+mgr();// now the object is called
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
