@@ -1,3 +1,5 @@
+TYPE-1 :-
+
 var a={
     name:"rahu",
     age:22,
@@ -6,4 +8,37 @@ var a={
     }
 }
 a.call()
-// this will make object left to function
+// this will call object only left to function
+
+
+
+
+var a={
+    pers1:{
+    name:"rahu",
+    age:22,
+    aall:function(){
+     console.log(this.age);
+    }
+},
+pers2:{
+    name:"Anup",
+    age:23,
+    ball:function(){
+     console.log(this.age);
+    }
+},
+pers3:{
+    name:"Rakesh",
+    age:24,
+    call:function(){
+     console.log(this.age);
+    }
+}
+}
+a.pers1.aall(); //calls object to the left of function aall that is pers1
+a.pers2.ball(); //calls object to the left of function ball that is pers2
+a.pers3.call();//calls object to the left of function call that is pers3
+---------------------------------------------------------------------------------------------------------------------
+TYPE-2:-
+
