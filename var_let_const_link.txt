@@ -1,0 +1,4 @@
+ https://www.freecodecamp.org/news/differences-between-var-let-const-javascript/#:~:text=If%20you're%20just%20starting,cannot%20be%20reassigned%20another%20value
+ 
+ --------------------------------------------------------------------------------------------------------------------------------------------
+ 
