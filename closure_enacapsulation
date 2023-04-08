@@ -1,0 +1,18 @@
+ const rsala=(()=>{
+        let sal=60000;
+        function changesal(amount){
+            sal+=amount;
+        }
+
+        return {
+            cuurentsal:function(){return sal},
+            reducesal: function(){changesal(-6000)},
+            increasesal:function(){changesal(11000)},
+        }
+       })();
+       console.log(rsala.cuurentsal());
+       rsala.reducesal();
+       console.log(rsala.cuurentsal());
+       rsala.increasesal();
+       console.log(rsala.cuurentsal());
+       ------------------------------------------------------------------------------------------------
